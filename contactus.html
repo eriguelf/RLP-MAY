@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Hutt Dental Specialists - HOME</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+a{
+  font-size: 50px;
+  font-weight: bold;
+}
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-green w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-medium"><img src="logogl200.png"></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="team.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM</a>
+    <a href="index.html#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
+    <a href="contactus.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <a href="faq.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQ</a>
+
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-green w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEAM</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICES</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQ</a>
+
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center"><b>CONTACT US</b></h2>
+    <p class="w3-opacity w3-center"><i>Got Questions?</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="">
+        <center>
+        <i class="fa fa-map-marker" style="width:30px"></i> Level 3, 44-56, Queens Drive,<br>
+        <i class="fa fa-phone" style="width:30px"></i> Lower Hutt, 5010<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email us: info@perio.co.nz<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Call Us: 04-939-2499<br><br><br>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.5752606743386!2d174.9016963270042!3d-41.21035670999921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38aa55cddbb4ad%3A0x8e4993d721ace542!2sLevel%203%2F44%20Queens%20Drive%2C%20Lower%20Hutt%205010!5e1!3m2!1sen!2snz!4v1582143438529!5m2!1sen!2snz" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+      </center>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 4000);
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
